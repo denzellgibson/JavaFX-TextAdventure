@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="615.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
+   <children>
+      <TextArea fx:id="storyTextArea" editable="false" layoutX="326.0" layoutY="373.0" prefHeight="228.0" prefWidth="516.0" />
+      <Label fx:id="playerLabel" layoutX="126.0" layoutY="32.0" text="Player">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="enemyLabel" layoutX="685.0" layoutY="32.0" text="Enemy">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="95.0" text="Health:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="164.0" text="Armor Class:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="235.0" text="Attack Bonus:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="274.0" text="Damage Bonus:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="132.0" text="Mana:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="198.0" text="Damage Reduction:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="310.0" text="Spell Bonus:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="playerHealthTextField" editable="false" layoutX="147.0" layoutY="93.0" mouseTransparent="true" />
+      <TextField fx:id="playerManaTextField" editable="false" layoutX="147.0" layoutY="130.0" mouseTransparent="true" />
+      <TextField fx:id="playerACTextField" editable="false" layoutX="147.0" layoutY="162.0" mouseTransparent="true" />
+      <TextField fx:id="playerDRTextField" editable="false" layoutX="147.0" layoutY="196.0" mouseTransparent="true" />
+      <TextField fx:id="playerABTextField" editable="false" layoutX="147.0" layoutY="233.0" mouseTransparent="true" />
+      <TextField fx:id="playerDBTextField" editable="false" layoutX="147.0" layoutY="272.0" mouseTransparent="true" />
+      <TextField fx:id="playerSBTextField" editable="false" layoutX="147.0" layoutY="308.0" mouseTransparent="true" />
+      <Button fx:id="attackButton" layoutX="16.0" layoutY="389.0" mnemonicParsing="false" onAction="#playerAttack" prefHeight="25.0" prefWidth="75.0" text="Attack" />
+      <Button fx:id="defendButton" layoutX="110.0" layoutY="389.0" mnemonicParsing="false" onAction="#playerDefend" prefHeight="25.0" prefWidth="75.0" text="Defend" />
+      <Button fx:id="fleeButton" layoutX="204.0" layoutY="389.0" mnemonicParsing="false" onAction="#playerFlee" prefHeight="25.0" prefWidth="75.0" text="Flee" />
+      <Label layoutX="599.0" layoutY="316.0" text="Spell Bonus:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="598.0" layoutY="204.0" text="Damage Reduction:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="598.0" layoutY="138.0" text="Mana:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="280.0" text="Damage Bonus:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="241.0" text="Attack Bonus:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="598.0" layoutY="170.0" text="Armor Class:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="599.0" layoutY="101.0" text="Health:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enemySBTextField" editable="false" layoutX="732.0" layoutY="313.0" mouseTransparent="true" />
+      <TextField fx:id="enemyDBTextField" editable="false" layoutX="732.0" layoutY="277.0" mouseTransparent="true" />
+      <TextField fx:id="enemyABTextField" editable="false" layoutX="732.0" layoutY="238.0" mouseTransparent="true" />
+      <TextField fx:id="enemyDRTextField" editable="false" layoutX="732.0" layoutY="201.0" mouseTransparent="true" />
+      <TextField fx:id="enemyACTextField" editable="false" layoutX="732.0" layoutY="167.0" mouseTransparent="true" />
+      <TextField fx:id="enemyManaTextField" editable="false" layoutX="732.0" layoutY="135.0" mouseTransparent="true" />
+      <TextField fx:id="enemyHealthTextField" editable="false" layoutX="732.0" layoutY="98.0" mouseTransparent="true" />
+      <Button fx:id="startButton" layoutX="377.0" layoutY="111.0" mnemonicParsing="false" onAction="#startGame" prefHeight="64.0" prefWidth="113.0" text="Start Game!" />
+      <Button fx:id="exitButton" layoutX="377.0" layoutY="201.0" mnemonicParsing="false" onAction="#exitGame" prefHeight="64.0" prefWidth="113.0" text="Exit Game" />
+      <Button fx:id="nextEnemyButton" layoutX="16.0" layoutY="432.0" mnemonicParsing="false" onAction="#nextEnemy" prefHeight="38.0" prefWidth="84.0" text="Next Enemy" />
+      <Button fx:id="winButton" layoutX="110.0" layoutY="432.0" mnemonicParsing="false" onAction="#finishGame" prefHeight="38.0" prefWidth="75.0" text="Winner!" />
+   </children>
+</AnchorPane>

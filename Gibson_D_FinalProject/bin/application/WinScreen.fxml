@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="615.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WinController">
+   <children>
+      <Label layoutX="298.0" layoutY="65.0" text="Winner!">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="407.0" layoutY="273.0" text="Yay!">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="leaveGameButton" layoutX="373.0" layoutY="426.0" mnemonicParsing="false" onAction="#leaveGame" prefHeight="100.0" prefWidth="157.0" text="Leave Game" />
+   </children>
+</AnchorPane>
